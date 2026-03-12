@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <h2>Formulaire d'inscription</h2>
+    <form action="inscription.php" method="POST">
+        <label for="nom">Nom :</label><br>
+        <input type="text" id="nom" name="nom" required>
+        <span id="errnom"></span><br><br>
+        <label for="prenom">Prénom :</label><br>
+        <input type="text" id="prenom" name="prenom">
+        <span id="errprenom"></span><br><br>
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email" required>
+        <span id="erremail"></span><br><br>
+        <label for="password">Mot de passe :</label><br>
+        <input type="password" id="password" name="password" minlength="6" required>
+        <span id="errpassword"></span><br><br>
+        <label for="date">Date de naissance :</label><br>
+        <input type="date" id="date" name="date">
+        <span id="errnaissance"></span><br><br>
+        <label>Genre :</label><br>
+        <input type="radio" name="genre" value="Homme"> Homme
+        <input type="radio" name="genre" value="Femme"> Femme<br><br>
+        <label>Ville :</label><br>
+        <select name="ville">
+            <option value="">-- Choisir une ville --</option>
+            <option value="Marrakech">Marrakech</option>
+            <option value="Casablanca">Casablanca</option>
+            <option value="Rabat">Rabat</option>
+        </select>
+        <span id="errville"></span><br><br>
+        <label for="photo">Photo :</label><br>
+        <input type="file" id="photo">
+        <span id="errphoto"></span><br><br>
+        <label>
+            <input type="checkbox" name="conditions" required>
+            J'accepte les conditions d'utilisation
+        </label><br><br>
+        <button type="submit">S'inscrire</button>
+        <button type="reset">Annuler</button>
+    </form>
+    <script src="inscription.js"></script>
+</body>
+</html>
